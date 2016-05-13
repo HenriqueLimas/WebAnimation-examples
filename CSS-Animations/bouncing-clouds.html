@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+
+  <title>Bouncing Clouds</title>
+
+  <script src="//www.kirupa.com/js/prefixfree.min.js"></script>
+
+  <style>
+  .container {
+    background-color: #a2bfce;
+    border-radius: 4px;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .cloud {
+    position: absolute;
+  }
+
+  .cloud--big {
+    animation: bobble 2s infinite;
+    margin: 15px 0 0 100px;
+    height: 154px;
+    width: 238px;
+  }
+
+  .cloud--small {
+    animation: bobble 4s infinite;
+    margin: 65px 0 0 200px;
+    height: 103px;
+    width: 158px;
+  }
+
+  .cloud--big:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes bobble {
+    0% {
+      transform: translate(50px, 40px);
+      animation-timing-function: ease-in;
+    }
+
+    50% {
+      transform: translate(50px, 50px);
+      animation-timing-function: ease-out;
+    }
+
+    100% {
+      transform: translate(50px, 40px);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="cloud cloud--big" src="//www.kirupa.com/images/bigCloud.png" alt="big cloud">
+    <img class="cloud cloud--small" src="//www.kirupa.com/images/smallCloud.png" alt="small cloud">
+  </div>
+</body>
+</html>
